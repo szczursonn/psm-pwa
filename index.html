@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.json">
+    <title>Twoja lokalizacja</title>
+</head>
+<body>
+    <h1 class="text-center mt-1">Twoja lokalizacja</h1>
+    <div class="card container-sm">
+        <div class="card-header text-center">
+            Autorzy
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Michał Szczurek</li>
+            <li class="list-group-item">Mateusz Puto</li>
+        </ul>
+    </div>
+    
+    <ul class="nav nav-tabs" id="tab-controls">
+        <li class="nav-item">
+          <button class="nav-link active" id="map-tab-btn" data-bs-toggle="tab" data-bs-target="#map-tab">Mapa</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="sos-tab-btn" data-bs-toggle="tab" data-bs-target="#sos-tab">SOS</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="tab-content">
+        <!-- MAP TAB -->
+        <div class="tab-pane fade show active" id="map-tab">
+            <div id="geolocation-error-container">
+                <h5>There was an error while fetching geolocation: </h5>
+                <pre></pre>
+            </div>
+            <div id="map" style="height: 700px;"></div>
+        </div>
+        <!-- SOS TAB -->
+        <div class="tab-pane fade d-flex p-2 align-items-center justify-content-center" id="sos-tab">
+            <button type="button" class="btn btn-lg btn-primary" onclick="sosButtonClickHandler()">SOS</button>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "name": "Moja Lokalizacja",
+    "short_name": "Moja Lokalizacja",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "blue",
+    "theme_color": "blue",
+    "description": "Aplikacja pozwalająca na zlokalizowanie siebie i wysłanie SOS!",
+    "icons": [
+        {
+            "src": "icon_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+     ]
+}
